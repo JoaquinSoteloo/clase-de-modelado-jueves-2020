@@ -3,13 +3,13 @@ module Lib where
 type Estatura = Int
 type Fuerza = Int
 
-data Hobbit = Hobbit String Estatura Fuerza Bool
+data Hobbit = Hobbit{
+    nombre::String,
+    estatura::Estatura,
+    fuerza::Fuerza,
+    esDeLaCumbancha::Bool    
+}
 
-nombre :: Hobbit -> String
-nombre (Hobbit nombre _ _ _) = nombre
-
-estatura :: Hobbit -> Estatura
-estatura (Hobbit _ estatura _ _) = estatura
 
 bilbo :: Hobbit
 bilbo = Hobbit "Bilbo Bolsonaro" 125 30 True
